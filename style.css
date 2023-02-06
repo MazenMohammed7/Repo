@@ -1,0 +1,174 @@
+body{
+ background-color: #333;
+ font-family: 'Press Start 2P', cursive;
+ margin: 0;
+}
+
+.Mt {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+div h1 {
+  font-size: 80px;
+  color: #333;
+  width: fit-content;
+  background-color: white;
+  padding: 20px;
+  z-index: 1;
+}
+
+div h1::after {
+  content: "";
+  position: absolute;
+  width: 46%; 
+  height: 10px;
+  background-color: white;
+  left: 0;
+  top: 112px;
+}
+
+div h1::before {
+  content: "";
+  position: absolute;
+  width: 46%; 
+  height: 10px;
+  background-color: white;
+  right:  0;
+  top: 112px;
+}
+
+.flex {
+  margin-left: 10%;
+  display: flex; 
+  justify-content: space-between;
+}
+
+.flex .form {
+  width: 40%;
+}
+
+.flex .form input[type=number]{
+ width: 200px;
+ height: 60px;
+ background: none;
+ border: 2px solid white;
+ display: block;
+}
+
+/* CSS */
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 35px;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+h2 {
+  text-align: center;
+  color:white;
+  font-size: 21px;
+}
+
+h2 span:nth-child(1){
+  color:brown;
+}
+
+h2 span:nth-child(2) {
+  color: gold;
+}
+
+h2 span:nth-child(3){
+  color: blueviolet;
+}
+
+
+
+.conter {
+  margin-right: 10%;
+  margin-top: 50px;
+}
+
+.conter  h2 {
+  padding-bottom: 10%;
+}
+
+.conter p {
+  color: white;
+  margin-left: 36px;
+}
+
+@media only screen and (max-width: 600px) {
+  .flex {
+    display: block;
+  }
+  .button-85 {
+   margin-left: 100px;
+  }
+  .flex .form input[type=number] {
+    margin-left: 109px;
+  }
+  
+}
